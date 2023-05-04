@@ -5,8 +5,7 @@ allow_team_member_removal: true
 allow_member_removal: true
 allow_label_removal: true
 allow_repository_removal: false
-owners:
-  - tibeer
+owners: []
 members: []
 #  - tibeerbot
 teams:
