@@ -7,22 +7,24 @@ allow_label_removal: true
 allow_repository_removal: false
 owners:
   - tibeer
-members: []
-#  - tibeerbot
+members:
+  - frosty-geek
+  - tibeerbot
 teams:
   admins:
     description: ""
     private: false
     maintainers:
+      - tibeer
+      - frosty-geek
+    members:
       - tibeerbot
-#    members:
-#      - tibeerbot
   maintainers:
     description: ""
     private: false
     maintainers:
-      - tibeerbot
-  foo:
+      - tibeer
+  external:
     description: "some description"
     private: false
 repository_defaults:
@@ -55,6 +57,8 @@ repositories:
     default_branch_protection:
       branch_name: gh_pages
       active: false
+      required_pull_request_review_count: 2
+      enforce_admins: true
     labels:
       - name: documentation
         description: "overwrite documentation label colors"
@@ -63,7 +67,9 @@ repositories:
         description: "special label only for this repo"
         color: a00000
     teams:
-      foo: "push"
+      admins: "maintain"
+      maintainers: "write"
+      external: "read"
   ghom:
   repo02:
   repo03:
